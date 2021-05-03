@@ -1,0 +1,44 @@
+{
+  "name" : "mock-data",
+  "values" : [
+    {
+      "name": "map1",
+      "value": {
+        "current_state": 19,
+        "action": "R",
+        "observation": {
+          "state": 20,
+          "reward": -1,
+          "done": false,
+          "info": null
+        }
+      }
+    },
+    {
+      "name": "map2",
+      "value": {
+        "current_state": 20,
+        "action": "D",
+        "observation": {
+          "state": 30,
+          "reward": -1,
+          "done": false,
+          "info": null
+        }
+      }
+    },
+    {
+      "name": "map3",
+      "value": {
+        "current_state": 50,
+        "action": "D",
+        "observation": {
+          "state": 60,
+          "reward": 10,
+          "done": true,
+          "info": null
+        }
+      }
+    }
+  ]
+}

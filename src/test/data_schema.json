@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+
+  "definitions": {
+    "observation": {
+      "type": "object",
+      "properties": {
+        "state": {"type": "integer", "minimum": 0},
+        "reward": {"type": "integer"},
+        "done": {"type": "boolean"},
+        "info": {"type": ["string", "null"]}
+      }
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "current_state": {"type": "integer", "minimum": 0},
+        "action": {"type": "string", "minLength": 0, "maxLength": 1},
+        "observation": {"$ref": "#/definitions/observation"}
+      }
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "value": {"$ref": "#/definitions/value"}
+        }
+      }
+    }
+  },
+
+  "title": "Variables",
+  "description": "All the variables needed to make a decision",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "values": {
+      "$ref": "#/definitions/values"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name" : "mock-data",
+  "values" : [
+    {
+      "name": "map1",
+      "value": {
+        "current_state": "19",
+        "action": "RL",
+        "observation": {
+          "state": 20,
+          "reward": -1,
+          "done": false,
+          "info": null
+        }
+      }
+    }
+  ]
+}
